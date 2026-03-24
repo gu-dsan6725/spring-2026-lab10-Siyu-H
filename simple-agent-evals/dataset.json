@@ -1,0 +1,177 @@
+[
+    {
+        "input": "How long does it take to drive from Arlington VA to Georgetown University?",
+        "expected_output": "The drive from Arlington VA to Georgetown University takes approximately 15-25 minutes and is about 5-8 miles.",
+        "expected_tools": ["get_directions"],
+        "category": "directions",
+        "difficulty": "easy"
+    },
+    {
+        "input": "What is the current weather in Washington DC?",
+        "expected_output": "The current weather in Washington DC includes the temperature in Fahrenheit, wind speed, and humidity.",
+        "expected_tools": ["get_weather"],
+        "category": "weather",
+        "difficulty": "easy"
+    },
+    {
+        "input": "What are the top tourist attractions in Paris?",
+        "expected_output": "Top tourist attractions in Paris include the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, Champs-Elysees, and Sacre-Coeur.",
+        "expected_tools": ["duckduckgo_search"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "I am planning a trip from New York City to Boston. How far is it and what is the weather like in Boston right now?",
+        "expected_output": "The drive from New York City to Boston is approximately 215 miles and takes about 3.5-4 hours. The response should also include current Boston weather with temperature and conditions.",
+        "expected_tools": ["get_directions", "get_weather"],
+        "category": "multi_tool",
+        "difficulty": "medium"
+    },
+    {
+        "input": "What is the weather in Tokyo right now?",
+        "expected_output": "The current weather in Tokyo includes temperature in Fahrenheit, wind speed in mph, and humidity percentage.",
+        "expected_tools": ["get_weather"],
+        "category": "weather",
+        "difficulty": "easy"
+    },
+    {
+        "input": "How do I get from the White House to the Lincoln Memorial?",
+        "expected_output": "Directions from the White House to the Lincoln Memorial, which is a short trip of about 1-2 miles taking a few minutes by car.",
+        "expected_tools": ["get_directions"],
+        "category": "directions",
+        "difficulty": "easy"
+    },
+    {
+        "input": "What is the distance from Los Angeles to San Francisco and what are some good stops along the way?",
+        "expected_output": "The drive from Los Angeles to San Francisco is approximately 380 miles taking about 5-6 hours. Good stops include Santa Barbara, San Luis Obispo, Big Sur, and Monterey.",
+        "expected_tools": ["get_directions"],
+        "category": "multi_tool",
+        "difficulty": "medium"
+    },
+    {
+        "input": "What is the capital of Australia?",
+        "expected_output": "The capital of Australia is Canberra.",
+        "expected_tools": [],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "Should I bring an umbrella if I am visiting Seattle today?",
+        "expected_output": "The response should check Seattle weather and advise on whether an umbrella is needed based on current conditions and weather code.",
+        "expected_tools": ["get_weather"],
+        "category": "weather",
+        "difficulty": "medium"
+    },
+    {
+        "input": "I need to drive from Chicago to Milwaukee. How long will it take and what is the weather in Milwaukee?",
+        "expected_output": "The drive from Chicago to Milwaukee is approximately 90 miles and takes about 1.5 hours. The response should also include Milwaukee current weather.",
+        "expected_tools": ["get_directions", "get_weather"],
+        "category": "multi_tool",
+        "difficulty": "medium"
+    },
+    {
+        "input": "What are the latest developments in quantum computing?",
+        "expected_output": "A summary of recent quantum computing news and developments from web search results.",
+        "expected_tools": ["duckduckgo_search"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "How far is it from the Pentagon to Dulles Airport?",
+        "expected_output": "The drive from the Pentagon to Dulles Airport is approximately 25-30 miles and takes about 30-45 minutes depending on traffic.",
+        "expected_tools": ["get_directions"],
+        "category": "directions",
+        "difficulty": "easy"
+    },
+    {
+        "input": "I want to plan a weekend in Miami. What is the weather like and what are the best things to do there?",
+        "expected_output": "Current Miami weather conditions plus a list of popular activities and attractions in Miami from web search.",
+        "expected_tools": ["get_weather", "duckduckgo_search"],
+        "category": "multi_tool",
+        "difficulty": "medium"
+    },
+    {
+        "input": "What is the weather in London and how does it compare to the weather in Paris right now?",
+        "expected_output": "Current weather for both London and Paris with a comparison of temperatures and conditions.",
+        "expected_tools": ["get_weather"],
+        "category": "weather",
+        "difficulty": "hard"
+    },
+    {
+        "input": "How long would it take to drive from Denver to Yellowstone National Park?",
+        "expected_output": "The drive from Denver to Yellowstone National Park is approximately 560 miles and takes about 8-9 hours.",
+        "expected_tools": ["get_directions"],
+        "category": "directions",
+        "difficulty": "easy"
+    },
+    {
+        "input": "What is Amazon Bedrock and what services does it offer?",
+        "expected_output": "Amazon Bedrock is a fully managed service by AWS that provides access to foundation models from leading AI companies. It offers model access, fine-tuning, RAG, agents, guardrails, and evaluation capabilities.",
+        "expected_tools": ["duckduckgo_search"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "I am driving from Georgetown University to Baltimore Inner Harbor. How far is it, what is the weather in Baltimore, and are there any good restaurants near the Inner Harbor?",
+        "expected_output": "The drive is approximately 40 miles taking about 1 hour. Current Baltimore weather. Plus restaurant recommendations near Inner Harbor from web search.",
+        "expected_tools": ["get_directions", "get_weather", "duckduckgo_search"],
+        "category": "multi_tool",
+        "difficulty": "hard"
+    },
+    {
+        "input": "What is the current temperature in Anchorage Alaska?",
+        "expected_output": "The current temperature in Anchorage Alaska in Fahrenheit.",
+        "expected_tools": ["get_weather"],
+        "category": "weather",
+        "difficulty": "easy"
+    },
+    {
+        "input": "How do I get from Times Square to JFK Airport?",
+        "expected_output": "Directions from Times Square to JFK Airport with distance and estimated driving time, approximately 15-20 miles taking 30-60 minutes.",
+        "expected_tools": ["get_directions"],
+        "category": "directions",
+        "difficulty": "easy"
+    },
+    {
+        "input": "What are the best practices for prompt engineering with large language models?",
+        "expected_output": "Best practices for prompt engineering including being specific, providing examples, using system prompts, chain of thought reasoning, and iterating on prompts.",
+        "expected_tools": [],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "I am road tripping from Austin TX to Nashville TN. How far is the drive, what is the weather like in Nashville right now, and what are the must-see live music venues there?",
+        "expected_output": "The drive from Austin to Nashville is approximately 850 miles taking about 12-13 hours. Current Nashville weather with temperature and conditions. Plus a list of popular live music venues in Nashville such as the Ryman Auditorium, Bluebird Cafe, and Broadway honky-tonks.",
+        "expected_tools": ["get_directions", "get_weather", "duckduckgo_search"],
+        "category": "multi_tool",
+        "difficulty": "hard"
+    },
+    {
+        "input": "Book me a flight from Washington DC to London for next Friday.",
+        "expected_output": "The agent should acknowledge that it cannot book flights. It does not have a flight booking tool and should clearly state this limitation rather than hallucinating a booking.",
+        "expected_tools": [],
+        "category": "out_of_scope",
+        "difficulty": "medium"
+    },
+    {
+        "input": "Send an email to my boss telling him I will be late to the meeting tomorrow.",
+        "expected_output": "The agent should explain that it cannot send emails. It does not have an email tool and should clearly state this limitation.",
+        "expected_tools": [],
+        "category": "out_of_scope",
+        "difficulty": "medium"
+    },
+    {
+        "input": "What was the closing price of Apple stock yesterday?",
+        "expected_output": "The agent may attempt a web search but should not fabricate a specific stock price. It should caveat that real-time stock data requires a dedicated financial data source and any search results may be delayed.",
+        "expected_tools": ["duckduckgo_search"],
+        "category": "out_of_scope",
+        "difficulty": "medium"
+    },
+    {
+        "input": "Order me a pepperoni pizza from Dominos to 1600 Pennsylvania Avenue.",
+        "expected_output": "The agent should explain that it cannot place food orders. It does not have an ordering or e-commerce tool and should clearly state this limitation.",
+        "expected_tools": [],
+        "category": "out_of_scope",
+        "difficulty": "medium"
+    }
+]

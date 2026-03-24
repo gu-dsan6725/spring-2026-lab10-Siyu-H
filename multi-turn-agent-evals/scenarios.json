@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Polite customer checks order status",
+        "input": "Hi there! I placed an order recently and I'd like to check on its status. My order number is ORD-1001.",
+        "task_description": "Customer wants to check the status of order ORD-1001. They should receive shipping status, tracking number, and estimated delivery date.",
+        "actor_traits": ["polite", "patient", "clear"],
+        "persona": "polite",
+        "category": "order_status",
+        "expected_tools": ["lookup_order"],
+        "expected_outcome": "Agent looks up order ORD-1001 and provides shipping status, tracking number TRK-88812345, and estimated delivery date."
+    },
+    {
+        "name": "Demanding customer wants order update",
+        "input": "Where is my order ORD-1002?! It should have been here by now!",
+        "task_description": "Customer is upset about order ORD-1002. Agent should look it up and inform them it was delivered on 2026-03-14.",
+        "actor_traits": ["impatient", "direct", "frustrated"],
+        "persona": "demanding",
+        "category": "order_status",
+        "expected_tools": ["lookup_order"],
+        "expected_outcome": "Agent acknowledges frustration, looks up order, and informs customer it was already delivered on 2026-03-14."
+    },
+    {
+        "name": "Customer wants to return a product",
+        "input": "I received my order ORD-1002 but the laptop stand is wobbly. I want to return it.",
+        "task_description": "Customer wants to return items from order ORD-1002 due to a defective laptop stand. Agent should verify order, explain return policy, and process the return.",
+        "actor_traits": ["reasonable", "clear", "expects-resolution"],
+        "persona": "neutral",
+        "category": "return",
+        "expected_tools": ["lookup_order", "process_return"],
+        "expected_outcome": "Agent looks up order, confirms it is within 30-day return window, explains return policy, and initiates the return."
+    },
+    {
+        "name": "Confused customer needs product help",
+        "input": "Um, I'm looking for something... I think headphones? Or maybe earbuds? What do you have that's good for working from home?",
+        "task_description": "Customer is unsure what they want. Agent should search for audio products and help them choose between headphones and earbuds.",
+        "actor_traits": ["uncertain", "vague", "needs-guidance"],
+        "persona": "confused",
+        "category": "product_search",
+        "expected_tools": ["search_products"],
+        "expected_outcome": "Agent searches audio products, presents options with prices, and helps customer understand the differences."
+    },
+    {
+        "name": "Customer changes shipping address",
+        "input": "I just placed order ORD-1003 but I realized I need to change the shipping address. Can you update it to 100 Broadway, New York, NY 10005?",
+        "task_description": "Customer needs to update shipping address for pending order ORD-1003. Agent should verify the order is still pending and update the address.",
+        "actor_traits": ["polite", "clear", "in-a-hurry"],
+        "persona": "polite",
+        "category": "order_change",
+        "expected_tools": ["lookup_order", "update_shipping_address"],
+        "expected_outcome": "Agent verifies order ORD-1003 is pending, updates address to 100 Broadway, New York, NY 10005, and confirms the change."
+    },
+    {
+        "name": "Customer checks product availability",
+        "input": "Do you have the Lightning to USB-C adapter in stock? I need one urgently.",
+        "task_description": "Customer asks about a product that is out of stock (LUA-100). Agent should check inventory and inform customer it is unavailable.",
+        "actor_traits": ["direct", "urgent"],
+        "persona": "demanding",
+        "category": "inventory",
+        "expected_tools": ["check_inventory"],
+        "expected_outcome": "Agent checks inventory and informs customer the Lightning to USB-C Adapter is currently out of stock."
+    },
+    {
+        "name": "Customer tries to return an old order",
+        "input": "I want to return my Bluetooth speaker from order ORD-1004. It stopped working.",
+        "task_description": "Customer wants to return order ORD-1004 which was delivered on 2026-02-21. This is outside the 30-day return window. Agent should explain the policy.",
+        "actor_traits": ["frustrated", "persistent"],
+        "persona": "demanding",
+        "category": "return",
+        "expected_tools": ["lookup_order", "process_return"],
+        "expected_outcome": "Agent looks up order, attempts return, and explains that the 30-day return window has passed."
+    },
+    {
+        "name": "Customer asks about something out of scope",
+        "input": "Can you reset my account password? I forgot it and I can't log in.",
+        "task_description": "Customer asks for password reset which is outside the agent's capabilities. Agent should politely decline and direct to the right department.",
+        "actor_traits": ["polite", "confused"],
+        "persona": "confused",
+        "category": "out_of_scope",
+        "expected_tools": [],
+        "expected_outcome": "Agent explains it cannot reset passwords and suggests contacting the account support department."
+    },
+    {
+        "name": "Multi-step: search then check inventory then ask about shipping",
+        "input": "I'm looking for a good webcam for video calls. Do you have any? And how much do they cost?",
+        "task_description": "Customer wants to find a webcam, check availability, and understand pricing. This should involve searching products and checking inventory.",
+        "actor_traits": ["curious", "thorough", "asks-followups"],
+        "persona": "neutral",
+        "category": "product_search",
+        "expected_tools": ["search_products", "check_inventory"],
+        "expected_outcome": "Agent searches for webcams, finds the 4K Webcam with Mic at $89.99, confirms it is in stock with 12 units available."
+    },
+    {
+        "name": "Demanding customer with multiple requests",
+        "input": "I need to check my order ORD-1003, AND I want to know if you have any keyboards in stock. This better be quick.",
+        "task_description": "Customer has two requests: check order status and search for keyboards. Agent should handle both efficiently.",
+        "actor_traits": ["impatient", "multi-tasking", "demanding"],
+        "persona": "demanding",
+        "category": "order_status",
+        "expected_tools": ["lookup_order", "search_products"],
+        "expected_outcome": "Agent looks up order ORD-1003 (pending, keyboard and mouse) and searches for keyboards in the catalog."
+    }
+]
