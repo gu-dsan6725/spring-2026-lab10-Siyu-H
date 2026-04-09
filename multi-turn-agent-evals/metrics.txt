@@ -1,0 +1,166 @@
+
+================================================================================
+MULTI-TURN EVALUATION SUMMARY
+================================================================================
+Total scenarios: 10
+
+--------------------------------------------------------------------------------
+Scorer                     Avg Score      Min      Max    Count
+--------------------------------------------------------------------------------
+GoalCompletion               100.00%     1.00     1.00       10
+ToolUsage                     84.00%     0.40     1.00       10
+TurnEfficiency                80.00%     0.60     1.00       10
+ConversationQuality           97.50%     0.75     1.00       10
+PolicyAdherence               85.00%     0.00     1.00       10
+
+--------------------------------------------------------------------------------
+PER-CATEGORY BREAKDOWN
+--------------------------------------------------------------------------------
+
+  [inventory]
+    GoalCompletion           100.00%  (1 cases)
+    ToolUsage                100.00%  (1 cases)
+    TurnEfficiency           100.00%  (1 cases)
+    ConversationQuality      100.00%  (1 cases)
+    PolicyAdherence          100.00%  (1 cases)
+
+  [order_change]
+    GoalCompletion           100.00%  (1 cases)
+    ToolUsage                 50.00%  (1 cases)
+    TurnEfficiency           100.00%  (1 cases)
+    ConversationQuality      100.00%  (1 cases)
+    PolicyAdherence          100.00%  (1 cases)
+
+  [order_status]
+    GoalCompletion           100.00%  (3 cases)
+    ToolUsage                 80.00%  (3 cases)
+    TurnEfficiency            73.33%  (3 cases)
+    ConversationQuality      100.00%  (3 cases)
+    PolicyAdherence           83.33%  (3 cases)
+
+  [out_of_scope]
+    GoalCompletion           100.00%  (1 cases)
+    ToolUsage                100.00%  (1 cases)
+    TurnEfficiency            60.00%  (1 cases)
+    ConversationQuality      100.00%  (1 cases)
+    PolicyAdherence          100.00%  (1 cases)
+
+  [product_search]
+    GoalCompletion           100.00%  (2 cases)
+    ToolUsage                 75.00%  (2 cases)
+    TurnEfficiency            80.00%  (2 cases)
+    ConversationQuality      100.00%  (2 cases)
+    PolicyAdherence           50.00%  (2 cases)
+
+  [return]
+    GoalCompletion           100.00%  (2 cases)
+    ToolUsage                100.00%  (2 cases)
+    TurnEfficiency            80.00%  (2 cases)
+    ConversationQuality       87.50%  (2 cases)
+    PolicyAdherence          100.00%  (2 cases)
+
+--------------------------------------------------------------------------------
+PER-PERSONA BREAKDOWN
+--------------------------------------------------------------------------------
+
+  [confused]
+    GoalCompletion:        100.00%  (2 cases)
+    Avg turns:                 3.0
+
+  [demanding]
+    GoalCompletion:        100.00%  (4 cases)
+    Avg turns:                 1.5
+
+  [neutral]
+    GoalCompletion:        100.00%  (2 cases)
+    Avg turns:                 2.0
+
+  [polite]
+    GoalCompletion:        100.00%  (2 cases)
+    Avg turns:                 2.0
+
+--------------------------------------------------------------------------------
+SCENARIO DETAILS
+--------------------------------------------------------------------------------
+
+  [PASS] Polite customer checks order status (polite, 3 turns, 18.0s)
+    Tools: ['lookup_order']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.60
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Demanding customer wants order update (demanding, 3 turns, 26.8s)
+    Tools: ['lookup_order']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.60
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Customer wants to return a product (neutral, 3 turns, 19.2s)
+    Tools: ['lookup_order', 'process_return']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.60
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Confused customer needs product help (confused, 3 turns, 30.0s)
+    Tools: ['search_products']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.60
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Customer changes shipping address (polite, 1 turns, 8.2s)
+    Tools: ['update_shipping_address']
+    GoalCompletion: 1.00
+    ToolUsage: 0.50
+    TurnEfficiency: 1.00
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Customer checks product availability (demanding, 1 turns, 15.0s)
+    Tools: ['check_inventory']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 1.00
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Customer tries to return an old order (demanding, 1 turns, 13.5s)
+    Tools: ['lookup_order', 'process_return']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 1.00
+    ConversationQuality: 0.75
+    PolicyAdherence: 1.00
+
+  [PASS] Customer asks about something out of scope (confused, 3 turns, 17.7s)
+    Tools: []
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.60
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Multi-step: search then check inventory then ask about shipping (neutral, 1 turns, 7.8s)
+    Tools: ['search_products']
+    GoalCompletion: 1.00
+    ToolUsage: 0.50
+    TurnEfficiency: 1.00
+    ConversationQuality: 1.00
+    PolicyAdherence: 0.00
+
+  [PASS] Demanding customer with multiple requests (demanding, 1 turns, 8.8s)
+    Tools: ['lookup_order', 'check_inventory']
+    GoalCompletion: 1.00
+    ToolUsage: 0.40
+    TurnEfficiency: 1.00
+    ConversationQuality: 1.00
+    PolicyAdherence: 0.50
+
+================================================================================

@@ -1,0 +1,37 @@
+[
+    {
+        "input": "What is the current local time and time zone offset in Tokyo right now?",
+        "expected_output": "The current local date and time in Tokyo, the IANA timezone (e.g. Asia/Tokyo), UTC offset, and timezone abbreviation if available.",
+        "expected_tools": ["get_current_time"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "Convert 250 US dollars to Japanese yen at the latest rate.",
+        "expected_output": "The USD/JPY exchange rate and the yen amount equivalent to 250 USD.",
+        "expected_tools": ["get_exchange_rate"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "What time is it in Paris now, and what is the UTC offset?",
+        "expected_output": "Current local time in Paris, timezone name, and UTC offset.",
+        "expected_tools": ["get_current_time"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "How many euros do I get for 100 USD today?",
+        "expected_output": "The USD to EUR rate and the euro amount for 100 USD.",
+        "expected_tools": ["get_exchange_rate"],
+        "category": "search",
+        "difficulty": "easy"
+    },
+    {
+        "input": "I am planning a business trip from New York to Tokyo. How long is the flight route by driving to JFK first, what is the current time in Tokyo, what is the weather there, what is the USD to JPY exchange rate, and what are the top business hotels in Shinjuku?",
+        "expected_output": "Driving directions from Manhattan to JFK Airport with distance and time, the current local time in Tokyo with timezone info, current Tokyo weather with temperature, the USD to JPY exchange rate, and a list of recommended business hotels in the Shinjuku area of Tokyo.",
+        "expected_tools": ["get_directions", "get_current_time", "get_weather", "get_exchange_rate", "duckduckgo_search"],
+        "category": "multi_tool",
+        "difficulty": "hard"
+    }
+]
